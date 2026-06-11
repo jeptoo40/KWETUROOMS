@@ -4,10 +4,14 @@ import IntroSection from "./components/IntroSection";
 import Features from "./components/Features";
 import PropertyGrid from "./components/PropertyGrid";
 import WhyChooseSection from "./components/WhyChooseSection";
+import SocialSection from "./components/SocialSection";
+import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
 import myLogo from "./assets/Kwetu-removebg-preview.png";
 import hero from "./assets/hero.jpg";
 import hero3 from "./assets/hero-3.jpg";
 import "./App.css";
+
 
 function App() {
   const [active, setActive] = useState("Home");
@@ -115,6 +119,9 @@ function App() {
       <WhyChooseSection />
       <Features />
       <PropertyGrid />
+      <Testimonials />
+      <SocialSection />
+      <Footer />
     </>
   );
 }
