@@ -1,0 +1,440 @@
+
+.about-hero {
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.about-hero-content h1 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.about-hero-content p {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+
+  
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.about-services {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.service-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.service-text h2 {
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  color: #19142b;
+}
+
+.service-description {
+  text-align: left;
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.service-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-image img:hover {
+  transform: scale(1.03);
+}
+
+
+.about-contact-section {
+  padding: 100px 0;
+  background: #f5f4f2;
+}
+
+.about-contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-contact-info h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: #19142b;
+  margin-bottom: 20px;
+}
+
+.about-contact-info > p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.about-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-contact-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #b89b5e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.about-contact-item h4 {
+  font-size: 0.9rem;
+  color: #999;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.about-contact-item p {
+  color: #19142b;
+  font-weight: 500;
+}
+
+/*  Form */
+.about-contact-form {
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.about-form-group {
+  margin-bottom: 25px;
+}
+
+.about-form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.about-form-group input,
+.about-form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+.about-form-group input:focus,
+.about-form-group textarea:focus {
+  border-color: #b89b5e;
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(184, 155, 94, 0.1);
+}
+
+.about-contact-btn {
+  background: #b89b5e;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.about-contact-btn:hover {
+  background: #a0844a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(184, 155, 94, 0.3);
+}
+
+
+.about-news-section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.about-news-subtitle {
+  text-align: center;
+  color: #b89b5e;
+  letter-spacing: 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.about-news-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: #19142b;
+  margin-bottom: 50px;
+}
+
+.about-news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.about-news-card {
+  background: #fafafa;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.about-news-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-news-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.about-news-date {
+  display: inline-block;
+  padding: 12px 20px 0;
+  color: #b89b5e;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.about-news-card h3 {
+  padding: 10px 20px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #19142b;
+  line-height: 1.5;
+}
+
+
+.desktop-nav a,
+.mobile-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.desktop-nav a:hover,
+.mobile-nav a:hover {
+  color: inherit;
+}
+
+.desktop-nav li.contact-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-scrolled .desktop-nav li.contact-btn a {
+  color: #000;
+}
+
+.desktop-nav li.contact-btn a:hover {
+  color: #000;
+}
+
+
+
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
+  .about-contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .service-wrapper {
+    gap: 40px;
+  }
+  
+  .service-image {
+    height: 350px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .about-hero {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+  }
+
+  .about-hero-content p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+
+  .about-services {
+    padding: 60px 0;
+  }
+  
+  .service-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .service-text h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .service-description {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .service-image {
+    height: 280px;
+    order: -1;
+  }
+
+
+  .about-contact-section {
+    padding: 60px 0;
+  }
+
+  .about-contact-form {
+    padding: 30px;
+  }
+
+  .about-contact-info h2 {
+    font-size: 2rem;
+  }
+
+ 
+  .about-news-section {
+    padding: 60px 0;
+  }
+
+  .about-news-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-news-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-content h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+
+  .about-hero-content p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  .about-services {
+    padding: 40px 0;
+  }
+  
+  .service-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .service-description {
+    font-size: 0.95rem;
+  }
+  
+  .service-image {
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .about-contact-form {
+    padding: 20px;
+  }
+}

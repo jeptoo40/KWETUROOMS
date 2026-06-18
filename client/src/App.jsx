@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StayPicker from "./components/StayPicker";
 import IntroSection from "./components/IntroSection";
 import Features from "./components/Features";
@@ -7,25 +8,13 @@ import WhyChooseSection from "./components/WhyChooseSection";
 import SocialSection from "./components/SocialSection";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
-import myLogo from "./assets/Kwetu-removebg-preview.png";
 import hero from "./assets/hero.jpg";
 import hero3 from "./assets/hero-3.jpg";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import About from "./pages/About"; // Import About page
 
-
-function App() {
-  const [active, setActive] = useState("Home");
-
-  const menu = [
-    "Home",
-    "About Us",
-    "Properties",
-    "Property Type",
-    "Locations",
-    "Blog",
-  ];
-
-  // HERO SLIDER
+function HomePage() {
   const heroImages = [hero, hero3];
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -41,31 +30,6 @@ function App() {
 
   return (
     <>
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="nav-inner">
-          <div className="nav-logo">
-            <img src={myLogo} alt="Kwetu Rooms" />
-          </div>
-
-          <ul className="nav-links">
-            {menu.map((item) => (
-              <li
-                key={item}
-                className={active === item ? "active" : ""}
-                onClick={() => setActive(item)}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <div className="nav-actions">
-            <button>CONTACT US</button>
-          </div>
-        </div>
-      </nav>
-
       {/* HERO */}
       <section
         className="hero"
@@ -78,8 +42,6 @@ function App() {
 
           {/* SEARCH BAR */}
           <div className="search-bar">
-
-            {/* STAY */}
             <div className="search-item">
               <label>Stay</label>
               <StayPicker />
@@ -87,7 +49,6 @@ function App() {
 
             <div className="divider"></div>
 
-            {/* GUESTS */}
             <div className="search-item">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -107,14 +68,12 @@ function App() {
               </select>
             </div>
 
-            {/* SEARCH BUTTON */}
             <button className="search-btn">Search</button>
-
           </div>
         </div>
       </section>
 
-      {/* INTRO SECTION (CORRECT PLACE) */}
+      {/* OTHER SECTIONS */}
       <IntroSection />
       <WhyChooseSection />
       <Features />
@@ -123,6 +82,21 @@ function App() {
       <SocialSection />
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          {/* Add more routes as needed */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
