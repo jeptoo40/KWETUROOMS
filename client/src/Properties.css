@@ -1,0 +1,249 @@
+
+.properties-hero {
+  height: 50vh;
+  min-height: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.properties-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.properties-hero-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.properties-hero-content h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 6px;
+  margin-bottom: 15px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.properties-hero-content p {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Filter Section */
+.properties-filter-section {
+  padding: 25px 0;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: #888;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #b89b5e;
+  transition: width 0.3s ease;
+}
+
+.filter-btn:hover {
+  color: #333;
+}
+
+.filter-btn.active {
+  color: #19142b;
+  font-weight: 500;
+}
+
+.filter-btn.active::after {
+  width: 100%;
+}
+
+/* Property Grid */
+.properties-grid-section {
+  padding: 60px 0;
+  background: #f5f4f2;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.property-card {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.property-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.property-card:hover img {
+  transform: scale(1.05);
+}
+
+.property-card h3 {
+  padding: 20px 20px 5px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #19142b;
+}
+
+.property-location {
+  padding: 0 20px 20px;
+  font-size: 0.85rem;
+  color: #999;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.no-properties {
+  text-align: center;
+  color: #999;
+  font-size: 1.1rem;
+  padding: 40px 0;
+  grid-column: 1 / -1;
+}
+
+.properties-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.intro-btn2 {
+  background: transparent;
+  border: 1px solid #be7d03;
+  color: #b8860b;
+  padding: 18px 45px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.intro-btn2:hover {
+  background: #c9a86a;
+  color: #fff;
+  border-color: #c9a86a;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .property-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .properties-hero {
+    height: 35vh;
+    min-height: 250px;
+  }
+
+  .properties-hero-content h1 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+  }
+
+  .properties-hero-content p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .properties-filter-section {
+    padding: 15px 0;
+  }
+
+  .filter-wrapper {
+    gap: 20px;
+  }
+
+  .filter-btn {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+
+  .properties-grid-section {
+    padding: 40px 0;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-card img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-wrapper {
+    gap: 12px;
+  }
+
+  .filter-btn {
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+  }
+
+  .property-card img {
+    height: 200px;
+  }
+}

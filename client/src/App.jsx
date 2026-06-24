@@ -12,7 +12,13 @@ import hero from "./assets/hero.jpg";
 import hero3 from "./assets/hero-3.jpg";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import About from "./pages/About"; // Import About page
+import About from "./pages/About"; 
+import Properties from "./pages/Properties";
+
+import Blog from "./pages/Blog";
+
+
+
 
 function HomePage() {
   const heroImages = [hero, hero3];
@@ -93,11 +99,14 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
-          {/* Add more routes as needed */}
+          <Route path="/Properties" element={<Properties />} />
+          <Route path="/Blog" element={<Blog />} />
+       
         </Routes>
       </div>
     </Router>
   );
+  
 }
 
 export default App;

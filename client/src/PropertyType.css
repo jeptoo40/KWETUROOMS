@@ -1,0 +1,145 @@
+/* Property Type Hero */
+.property-type-hero {
+  height: 50vh;
+  min-height: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.property-type-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.property-type-hero-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.property-type-hero-content h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 6px;
+  margin-bottom: 15px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.property-type-hero-content p {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Property Types Grid */
+.property-type-section {
+  padding: 80px 0;
+  background: #f5f4f2;
+}
+
+.property-type-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.property-type-card {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.property-type-card span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.property-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #b89b5e;
+}
+
+.property-type-card:hover span {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .property-type-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .property-type-hero {
+    height: 35vh;
+    min-height: 250px;
+  }
+
+  .property-type-hero-content h1 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+  }
+
+  .property-type-hero-content p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .property-type-section {
+    padding: 40px 0;
+  }
+
+  .property-type-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .property-type-card {
+    padding: 20px 15px;
+  }
+
+  .property-type-card span {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .property-type-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .property-type-card {
+    padding: 15px 10px;
+  }
+
+  .property-type-card span {
+    font-size: 0.75rem;
+  }
+}
