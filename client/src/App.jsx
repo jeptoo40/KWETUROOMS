@@ -17,6 +17,7 @@ import Properties from "./pages/Properties";
 
 import Blog from "./pages/Blog";
 
+import Contact from "./pages/Contact";
 
 
 
@@ -36,7 +37,7 @@ function HomePage() {
 
   return (
     <>
-      {/* HERO */}
+     
       <section
         className="hero"
         style={{
@@ -46,7 +47,7 @@ function HomePage() {
         <div className="hero-overlay">
           <h1>Luxury Living</h1>
 
-          {/* SEARCH BAR */}
+         
           <div className="search-bar">
             <div className="search-item">
               <label>Stay</label>
@@ -79,7 +80,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* OTHER SECTIONS */}
+      {/* the OTHER SECTIONS */}
       <IntroSection />
       <WhyChooseSection />
       <Features />
@@ -101,6 +102,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/Properties" element={<Properties />} />
           <Route path="/Blog" element={<Blog />} />
+          <Route path="/Contact" element={<Contact />} />
+       
        
         </Routes>
       </div>

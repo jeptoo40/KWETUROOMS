@@ -37,7 +37,7 @@ const PropertyType = () => {
     <div>
       <Navbar />
 
-      {/* Hero Section */}
+      {/* the Hero Section */}
       <section
         className="property-type-hero"
         style={{ backgroundImage: `url(${heroImage})` }}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Navbar from "../Components/Navbar";
+
 import heroImage from "../assets/properties-hero.jpg";
 import Footer from "../Components/Footer";
 import property1 from "../assets/property1.jpg";
@@ -181,7 +181,7 @@ const Properties = () => {
 
   return (
     <div>
-      <Navbar />
+   
 
       <section
         className="properties-hero"

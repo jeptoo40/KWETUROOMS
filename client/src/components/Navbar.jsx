@@ -7,7 +7,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [propertiesDropdown, setPropertiesDropdown] = useState(false);
   const [propertyTypeDropdown, setPropertyTypeDropdown] = useState(false);
-  const [locationsDropdown, setLocationsDropdown] = useState(false); // ✅ ADDED
+  const [locationsDropdown, setLocationsDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,40 +21,51 @@ export default function Navbar() {
     };
   }, []);
 
-  // Property locations data
+  // PROPERTIES data (for PROPERTIES dropdown)
   const propertyLocations = [
-     "Buruburu", "Green Park", "Loresho", "Lavingtone",
+    "Buruburu", "Green Park", "Loresho", "Lavingtone",
     "Mbagathi", "Kileleshwa", "Jogoo rd", "Outering",
-    "Satelite", "Dagoretti", " kahawa west", "All Soaps",
+    "Satelite", "Dagoretti", "Kahawa West", "All Soaps",
     "Kasarani", "Roysambu", "Rongai", "Ruai",
     "Ngara", "Imara", "Kangu'undo", "Embakasi",
     "Utawala", "Kiambu", "Juja", "Withetie",
-    "Kimbo", "Thika Square", 
+    "Kimbo", "Thika Square"
+  ];
+
+  // OUR LOCATIONS data (for OUR LOCATIONS dropdown) - DIFFERENT from above
+  const ourLocations = [
+    "Nairobi CBD",
+    "Westlands",
+    "Karen",
+    "Kilimani",
+    "Riverside",
+    "Lavington",
+    "Kitisuru",
+    "Runda"
   ];
 
   // Property Types data
   const propertyTypes = [
-  
-   
     "Weekly",
     "Long Weekend",
     "Vacation",
     "Short Stays",
     "Monthly",
-    "Long Stays",
-   
-   
-   
+    "Long Stays"
   ];
 
-  //  3 columns
+  //  propertyLocations in 3 columns
   const column1 = propertyLocations.slice(0, 9);
   const column2 = propertyLocations.slice(9, 18);
   const column3 = propertyLocations.slice(18, 27);
 
-  // 2 columns
-  const typeColumn1 = propertyTypes.slice(0, 6);
-  const typeColumn2 = propertyTypes.slice(6, 11);
+  //  ourLocations in 2 columns
+  const ourColumn1 = ourLocations.slice(0, 4);
+  const ourColumn2 = ourLocations.slice(4, 8);
+
+  // Spliteed propertyTypes in 2 columns
+  const typeColumn1 = propertyTypes.slice(0, 3);
+  const typeColumn2 = propertyTypes.slice(3, 6);
 
   return (
     <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
@@ -65,7 +76,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
+       
         <ul className="desktop-nav">
           <li>
             <Link to="/">HOME</Link>
@@ -74,15 +85,13 @@ export default function Navbar() {
             <Link to="/about">ABOUT US</Link>
           </li>
           
-          {/* PROPERTIES DROPDOWN */}
+          
           <li 
             className="dropdown-trigger"
             onMouseEnter={() => setPropertiesDropdown(true)}
             onMouseLeave={() => setPropertiesDropdown(false)}
           >
             <Link to="/properties">PROPERTIES</Link>
-
-locations
             {propertiesDropdown && (
               <div className="mega-dropdown">
                 <div className="mega-dropdown-inner">
@@ -112,7 +121,7 @@ locations
             )}
           </li>
           
-          {/* PROPERTY TYPE DROPDOWN */}
+     
           <li 
             className="dropdown-trigger"
             onMouseEnter={() => setPropertyTypeDropdown(true)}
@@ -124,14 +133,14 @@ locations
                 <div className="mega-dropdown-inner">
                   <div className="mega-column">
                     {typeColumn1.map((type) => (
-                      <Link key={type} to={`/properties"/${type.toLowerCase().replace(/ /g, '-')}`}>
+                      <Link key={type} to={`/property-type/${type.toLowerCase().replace(/ /g, '-')}`}>
                         {type}
                       </Link>
                     ))}
                   </div>
                   <div className="mega-column">
                     {typeColumn2.map((type) => (
-                      <Link key={type} to={`/properties"/${type.toLowerCase().replace(/ /g, '-')}`}>
+                      <Link key={type} to={`/property-type/${type.toLowerCase().replace(/ /g, '-')}`}>
                         {type}
                       </Link>
                     ))}
@@ -141,34 +150,25 @@ locations
             )}
           </li>
 
-          {/* PROPERTY LOCATIONS DROPDOWN */}
           <li 
             className="dropdown-trigger"
             onMouseEnter={() => setLocationsDropdown(true)}
             onMouseLeave={() => setLocationsDropdown(false)}
           >
-            <Link to="/#">PROPERTY LOCATIONS</Link>
+            <Link to="/#">OUR LOCATIONS</Link>
             {locationsDropdown && (
-              <div className="mega-dropdown locations-dropdown">
+              <div className="mega-dropdown ourLocations-dropdown">
                 <div className="mega-dropdown-inner">
                   <div className="mega-column">
-                    {column1.map((location) => (
-                      <Link key={location} to={`/properties/${location.toLowerCase().replace(/ /g, '-')}`}>
-                        {location}
-                      </Link>
-    
-                    ))}
-                  </div>
-                  <div className="mega-column">
-                    {column2.map((location) => (
-                      <Link key={location} to={`/properties/${location.toLowerCase().replace(/ /g, '-')}`}>
+                    {ourColumn1.map((location) => (
+                      <Link key={location} to={`/locations/${location.toLowerCase().replace(/ /g, '-')}`}>
                         {location}
                       </Link>
                     ))}
                   </div>
                   <div className="mega-column">
-                    {column3.map((location) => (
-                      <Link key={location} to={`/properties/${location.toLowerCase().replace(/ /g, '-')}`}>
+                    {ourColumn2.map((location) => (
+                      <Link key={location} to={`/locations/${location.toLowerCase().replace(/ /g, '-')}`}>
                         {location}
                       </Link>
                     ))}
@@ -182,18 +182,18 @@ locations
             <Link to="/blog">BLOG</Link>
           </li>
           <li className="contact-btn">
-            <Link to="/contact">CONTACT US</Link>
+            <Link to="/Contact">CONTACT US</Link>
           </li>
         </ul>
 
-        {/* Hamburger */}
+    
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        {/* Mobile Menu */}
+      
         <ul className={`mobile-nav ${menuOpen ? "active" : ""}`}>
           <li>
             <Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link>
@@ -205,16 +205,16 @@ locations
             <Link to="/properties" onClick={() => setMenuOpen(false)}>PROPERTIES</Link>
           </li>
           <li>
-            <Link to="/property-type" onClick={() => setMenuOpen(false)}>PROPERTY TYPE</Link>
+            <Link to="/properties" onClick={() => setMenuOpen(false)}>PROPERTY TYPE</Link>
           </li>
           <li>
-            <Link to="/locations" onClick={() => setMenuOpen(false)}>PROPERTY LOCATIONS</Link>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>OUR LOCATIONS</Link>
           </li>
           <li>
             <Link to="/blog" onClick={() => setMenuOpen(false)}>BLOG</Link>
           </li>
           <li>
-            <Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT US</Link>
+            <Link to="/Contact" onClick={() => setMenuOpen(false)}>CONTACT US</Link>
           </li>
         </ul>
       </div>

@@ -62,7 +62,7 @@ export default function StayPicker() {
   return (
     <div className="stay-wrapper" ref={wrapperRef}>
 
-      {/* DISPLAY */}
+      {/* DISPLAYING */}
       <div className="stay-display" onClick={() => setOpen(true)}>
         {isValidRange
           ? `${formatDate(range[0].startDate)} — ${formatDate(range[0].endDate)}`

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Navbar from "../Components/Navbar";
+
 import Footer from "../Components/Footer";
 import image1 from "../assets/blog-image-1.jpg";
 import image2 from "../assets/blog-image-2.jpg";
@@ -53,9 +53,8 @@ const Blog = () => {
 
   return (
     <div>
-      <Navbar />
+  
 
-      {/* Blog Section - Full width cards with image left, text right */}
       <section className="blog-section">
         <div className="container">
           {blogPosts.map((post) => (

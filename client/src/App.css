@@ -1740,13 +1740,13 @@ height: 70vh;
   padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  min-width: 700px;
+  min-width: 1px;
   z-index: 1000;
   animation: dropdownFade 0.3s ease;
 }
 
 .mega-dropdown.property-type-dropdown {
-  min-width: 400px;
+  min-width: 200px;
 }
 
 .mega-dropdown.locations-dropdown {

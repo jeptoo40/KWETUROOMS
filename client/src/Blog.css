@@ -98,7 +98,7 @@
   transform: translateX(5px);
 }
 
-/* Alternate rows - image on right for even posts */
+
 .blog-card:nth-child(even) {
   grid-template-columns: 1.5fr 1fr;
 }
@@ -107,7 +107,7 @@
   order: 2;
 }
 
-/* Responsive */
+
 @media (max-width: 1024px) {
   .blog-card {
     grid-template-columns: 1fr 1.2fr;

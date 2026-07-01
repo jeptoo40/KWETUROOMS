@@ -35,7 +35,7 @@ function Footer() {
 
           <p>Nairobi, Kenya</p>
           <p>+254 724 492 544 </p>
-          <p>info@kweturooms.com</p>
+          <p>contact@kweturooms.com</p>
         </div>
 
         <div className="footer-col">

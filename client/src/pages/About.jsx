@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Navbar from "../Components/Navbar";
+
 import heroImage from "../assets/about-hero.jpg";
 import serviceImage from "../assets/service-image.jpg";
 import Footer from "../Components/Footer";
@@ -48,7 +48,7 @@ const About = () => {
 
   return (
     <div>
-      <Navbar />
+      
 
 
       <section
@@ -63,7 +63,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* OUR SERVICE SECTION hapa  image iko the right text on left*/}
+    
       <section className="about-services">
         <div className="container">
           <div className="service-wrapper">
