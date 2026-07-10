@@ -19,7 +19,11 @@ import Blog from "./pages/Blog";
 
 import Contact from "./pages/Contact";
 
+import Location from "./pages/Location"
 
+import PropertyTypeDetail from "./pages/PropertyTypeDetail";
+
+import PropertyDetail from './pages/PropertyDetail';
 
 function HomePage() {
   const heroImages = [hero, hero3];
@@ -103,7 +107,16 @@ function App() {
           <Route path="/Properties" element={<Properties />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/Contact" element={<Contact />} />
+
+          <Route path="/locations/:locationName" element={<Location />} />
+
+          <Route path="/property-type/:typeName" element={<PropertyTypeDetail />} />
        
+
+          <Route path="/properties/:location" element={<PropertyDetail />} />
+
+
+          
        
         </Routes>
       </div>

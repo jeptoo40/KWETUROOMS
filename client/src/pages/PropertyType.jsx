@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // Add this import
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import heroImage from "../assets/property-type-hero.jpg";
@@ -33,11 +34,15 @@ const PropertyType = () => {
     "Family Friendly"
   ];
 
+  // Function to convert type to URL-friendly format
+  const getTypeLink = (type) => {
+    return type.toLowerCase().replace(/ /g, '-');
+  };
+
   return (
     <div>
       <Navbar />
 
-      {/* the Hero Section */}
       <section
         className="property-type-hero"
         style={{ backgroundImage: `url(${heroImage})` }}
@@ -50,14 +55,17 @@ const PropertyType = () => {
         </div>
       </section>
 
-      {/* Property Types Grid */}
       <section className="property-type-section">
         <div className="container">
           <div className="property-type-grid">
             {propertyTypes.map((type, index) => (
-              <div className="property-type-card" key={index}>
+              <Link 
+                to={`/property-type/${getTypeLink(type)}`} 
+                className="property-type-card" 
+                key={index}
+              >
                 <span>{type}</span>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -68,4 +76,4 @@ const PropertyType = () => {
   );
 };
 
-export default PropertyType; 
+export default PropertyType;

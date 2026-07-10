@@ -136,7 +136,9 @@ const About = () => {
                   <span className="about-contact-icon">✉</span>
                   <div>
                     <h4>Email</h4>
-                    <p>contact@kweturooms.com</p>
+                    <p>
+                    <a href="mailto:contact@kweturooms.com">contact@kweturooms.com </a >
+                      </p>
                   </div>
                 </div>
                 
@@ -144,7 +146,10 @@ const About = () => {
                   <span className="about-contact-icon">✆</span>
                   <div>
                     <h4>Phone</h4>
-                    <p>+254 72 492 544</p>
+                    <p> <a href="https://wa.me/254724492544" target="_blank" rel="noopener noreferrer">
+          +254 724 492 544
+        </a>
+        </p>
                   </div>
                 </div>
                 
